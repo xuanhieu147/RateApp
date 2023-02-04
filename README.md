@@ -15,5 +15,5 @@ Step 2. Add the dependency
   	
         dependencies {
         
-	        implementation 'com.github.Namdh1212:smart-app-rate:Tag'
+	        implementation 'com.github.xuanhieu147:RateApp:Tag'
 	}
