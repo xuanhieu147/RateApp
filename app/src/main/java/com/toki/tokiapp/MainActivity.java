@@ -7,6 +7,7 @@ import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import com.codemybrainsout.ratingdialog.MaybeLaterCallback;
 import com.codemybrainsout.ratingdialog.RateButtonCallback;
@@ -54,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
                         Toast.makeText(MainActivity.this,"Feedback cannot be left blank", Toast.LENGTH_SHORT).show();
                     }
                 })
-                .ratingButtonColor(R.color.colorPrimary)
+                .ratingButtonColor(ContextCompat.getColor(this,R.color.colorAccent))
                 .build();
 
         //Cancel On Touch Outside

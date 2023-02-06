@@ -201,39 +201,39 @@ public class RatingDialog extends AppCompatDialog implements RatingBar.OnRatingB
                     case 0:
                         tvTitle.setText("We are working hard for a better user eperience.");
                         tvContent.setText("We’d greatly appreciate if you can rate us.");
-                        ivIcon.setImageDrawable(context.getResources().getDrawable(R.drawable.rate_0));
+                        ivIcon.setImageDrawable(context.getResources().getDrawable(R.drawable.default_rate3));
                         break;
                     case 1:
                         tvTitle.setText("Oh, no!");
                         tvContent.setText("Please leave us some feedback");
-                        ivIcon.setImageDrawable(context.getResources().getDrawable(R.drawable.rate_1));
+                        ivIcon.setImageDrawable(context.getResources().getDrawable(R.drawable.default_rate1));
                         break;
 
                     case 2:
                         tvTitle.setText("Oh, no!");
                         tvContent.setText("Please leave us some feedback");
-                        ivIcon.setImageDrawable(context.getResources().getDrawable(R.drawable.rate_2));
+                        ivIcon.setImageDrawable(context.getResources().getDrawable(R.drawable.default_rate2));
                         break;
 
                     case 3:
                         tvTitle.setText("Oh, no!");
                         tvContent.setText("Please leave us some feedback");
-                        ivIcon.setImageDrawable(context.getResources().getDrawable(R.drawable.rate_3));
+                        ivIcon.setImageDrawable(context.getResources().getDrawable(R.drawable.default_rate3));
                         break;
                     case 4:
                         tvTitle.setText("We like you too!");
                         tvContent.setText("Thank for your feedback.");
-                        ivIcon.setImageDrawable(context.getResources().getDrawable(R.drawable.rate_4));
+                        ivIcon.setImageDrawable(context.getResources().getDrawable(R.drawable.default_rate4));
                         break;
                     case 5:
                         tvTitle.setText("We like you too!");
                         tvContent.setText("Thank for your feedback.");
-                        ivIcon.setImageDrawable(context.getResources().getDrawable(R.drawable.rate_5));
+                        ivIcon.setImageDrawable(context.getResources().getDrawable(R.drawable.default_rate5));
                         break;
                     default:
                         tvTitle.setText("Oh, no!");
                         tvContent.setText("Please leave us some feedback");
-                        ivIcon.setImageDrawable(context.getResources().getDrawable(R.drawable.rate_1));
+                        ivIcon.setImageDrawable(context.getResources().getDrawable(R.drawable.default_rate1));
                         break;
                 }
 

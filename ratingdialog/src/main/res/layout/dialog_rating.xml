@@ -10,8 +10,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:animateLayoutChanges="true"
-        android:layout_marginTop="-55sp"
+        android:layout_marginTop="-50sp"
         android:padding="@dimen/_15sdp"
+        android:backgroundTint="@color/black"
         android:layout_below="@id/dialog_rating_icon"
         android:background="@drawable/rounded_rectangle">
 
@@ -21,28 +22,28 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
             android:layout_marginTop="@dimen/_18sdp"
+            android:layout_marginRight="5dp"
             android:gravity="center"
-            android:textColor="#212121"
-            android:maxLines="2"
             android:lines="2"
+            android:maxLines="2"
             android:text="We are working hard for a better user eperience."
+            android:textColor="@color/white"
             android:textSize="@dimen/_12sdp" />
 
         <TextView
             android:id="@+id/dialog_rating_content"
-            android:layout_below="@+id/dialog_rating_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/dialog_rating_title"
             android:layout_centerHorizontal="true"
             android:layout_marginLeft="5dp"
+            android:layout_marginTop="@dimen/_3sdp"
             android:layout_marginRight="5dp"
             android:gravity="center"
-            android:textColor="#5F5F5F"
             android:maxLines="1"
-            android:layout_marginTop="@dimen/_3sdp"
             android:text="We’d greatly appreciate if you can rate us ."
+            android:textColor="@color/white"
             android:textSize="@dimen/_12sdp" />
 
         <com.willy.ratingbar.RotationRatingBar
@@ -53,6 +54,8 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="@dimen/_15sdp"
             app:srb_clearRatingEnabled="false"
+            app:srb_drawableEmpty="@drawable/ic_star_deactive"
+            app:srb_drawableFilled="@drawable/ic_star_active"
             app:srb_clickable="true"
             app:srb_isIndicator="false"
             app:srb_minimumStars="0"
@@ -90,40 +93,37 @@
             android:id="@+id/tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:textSize="16dp"
-            android:layout_centerHorizontal="true"
-            android:textColor="#2B9999"
-            android:text="The best we can get :)    "
-            android:layout_marginTop="@dimen/_15sdp"
             android:layout_below="@+id/dialog_rating_rating_bar"
-            />
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:gravity="center"
+            android:text="The best we can get :)    "
+            android:textColor="@color/white"
+            android:textSize="16dp" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnRate"
             android:layout_width="@dimen/_300sdp"
             android:layout_height="@dimen/_35sdp"
-            android:gravity="center"
-            android:background="@drawable/bg_button"
+            android:layout_below="@+id/tv"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="@dimen/_10sdp"
-            android:textColor="@color/white"
-            android:layout_below="@+id/tv"
-            android:text="Rate"/>
+            android:background="@drawable/bg_button"
+            android:gravity="center"
+            android:text="Rate"
+            android:textColor="@color/white" />
 
 
         <TextView
             android:id="@+id/btnLate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:textSize="14dp"
-            android:textColor="#5F5F5F"
-            android:text="Maybe Later"
-            android:layout_marginTop="@dimen/_10sdp"
             android:layout_below="@+id/btnRate"
-
-
+            android:layout_marginTop="@dimen/_10sdp"
+            android:gravity="center"
+            android:text="Maybe Later"
+            android:textColor="#99FFFFFF"
+            android:textSize="14dp"
             />
 
 
@@ -162,14 +162,15 @@
 
 
     </RelativeLayout>
+
     <ImageView
         android:id="@+id/dialog_rating_icon"
         android:layout_width="@dimen/_75sdp"
         android:layout_height="@dimen/_75sdp"
         android:layout_centerHorizontal="true"
         android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
         android:layout_marginRight="15dp"
-        android:src="@drawable/rate_0"
-        android:layout_marginTop="10dp" />
+        android:src="@drawable/default_rate3" />
 
 </RelativeLayout>
