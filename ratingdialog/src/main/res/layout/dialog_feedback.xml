@@ -27,7 +27,7 @@
                 android:id="@+id/logo"
                 android:layout_width="@dimen/_45sdp"
                 android:layout_height="@dimen/_45sdp"
-                android:src="@drawable/rate_0"
+                android:src="@drawable/default_rate3"
                 />
 
             <TextView
