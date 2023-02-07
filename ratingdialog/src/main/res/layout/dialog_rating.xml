@@ -10,32 +10,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:animateLayoutChanges="true"
-        android:layout_marginTop="-50sp"
+        android:layout_marginTop="8dp"
         android:padding="@dimen/_15sdp"
         android:backgroundTint="@color/black"
-        android:layout_below="@id/dialog_rating_icon"
         android:background="@drawable/rounded_rectangle">
 
-        <TextView
-            android:id="@+id/dialog_rating_title"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="@dimen/_18sdp"
-            android:layout_marginRight="5dp"
-            android:gravity="center"
-            android:lines="2"
-            android:maxLines="2"
-            android:text="We are working hard for a better user eperience."
-            android:textColor="@color/white"
-            android:textSize="@dimen/_12sdp" />
 
         <TextView
             android:id="@+id/dialog_rating_content"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/dialog_rating_title"
             android:layout_centerHorizontal="true"
             android:layout_marginLeft="5dp"
             android:layout_marginTop="@dimen/_3sdp"
@@ -44,9 +28,9 @@
             android:maxLines="1"
             android:text="We’d greatly appreciate if you can rate us ."
             android:textColor="@color/white"
-            android:textSize="@dimen/_12sdp" />
+            android:textSize="16sp" />
 
-        <com.willy.ratingbar.RotationRatingBar
+        <com.willy.ratingbar.ScaleRatingBar
             android:id="@+id/dialog_rating_rating_bar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -54,9 +38,9 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="@dimen/_15sdp"
             app:srb_clearRatingEnabled="false"
+            app:srb_clickable="true"
             app:srb_drawableEmpty="@drawable/ic_star_deactive"
             app:srb_drawableFilled="@drawable/ic_star_active"
-            app:srb_clickable="true"
             app:srb_isIndicator="false"
             app:srb_minimumStars="0"
             app:srb_numStars="5"
@@ -66,46 +50,13 @@
             app:srb_starWidth="@dimen/_24sdp"
             app:srb_stepSize="1" />
 
-        <ImageView
-            android:id="@+id/star2"
-            android:layout_width="@dimen/_18sdp"
-            android:layout_height="@dimen/_50sdp"
-            android:layout_marginTop="@dimen/_18sdp"
-            android:layout_marginLeft="-10dp"
-            android:layout_below="@+id/dialog_rating_title"
-            android:layout_toEndOf="@+id/dialog_rating_rating_bar"
-            android:src="@drawable/abc"/>
 
-        <ImageView
-            android:id="@+id/arrow"
-            android:layout_width="@dimen/_16sdp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="-5dp"
-            android:layout_below="@+id/star2"
-            android:layout_marginRight="@dimen/_8sdp"
-            android:layout_toStartOf="@+id/star2"
-            android:src="@drawable/arrow"/>
-
-        <!--        app:srb_drawableEmpty="@drawable/start_empty"-->
-        <!--        app:srb_drawableFilled="@drawable/star_filled"-->
-
-        <TextView
-            android:id="@+id/tv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/dialog_rating_rating_bar"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="@dimen/_15sdp"
-            android:gravity="center"
-            android:text="The best we can get :)    "
-            android:textColor="@color/white"
-            android:textSize="16dp" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnRate"
             android:layout_width="@dimen/_300sdp"
             android:layout_height="@dimen/_35sdp"
-            android:layout_below="@+id/tv"
+            android:layout_below="@+id/dialog_rating_rating_bar"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="@dimen/_10sdp"
             android:background="@drawable/bg_button"
@@ -163,14 +114,6 @@
 
     </RelativeLayout>
 
-    <ImageView
-        android:id="@+id/dialog_rating_icon"
-        android:layout_width="@dimen/_75sdp"
-        android:layout_height="@dimen/_75sdp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="15dp"
-        android:src="@drawable/default_rate3" />
+
 
 </RelativeLayout>

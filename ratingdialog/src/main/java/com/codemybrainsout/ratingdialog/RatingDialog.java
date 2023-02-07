@@ -24,6 +24,7 @@ import androidx.core.content.ContextCompat;
 
 import com.willy.ratingbar.BaseRatingBar;
 import com.willy.ratingbar.RotationRatingBar;
+import com.willy.ratingbar.ScaleRatingBar;
 
 import java.text.DateFormat;
 import java.text.ParseException;
@@ -46,9 +47,8 @@ public class RatingDialog extends AppCompatDialog implements RatingBar.OnRatingB
     private SharedPreferences sharedpreferences;
     private Activity context;
     private Builder builder;
-    private TextView tvTitle, tvContent, tvNegative, tvPositive;
-    private RotationRatingBar ratingBar;
-    private ImageView ivIcon;
+    private TextView tvContent, tvNegative, tvPositive;
+    private ScaleRatingBar ratingBar;
     private LinearLayout ratingButtons;
     Button btnRate;
     TextView btnLate;
@@ -80,12 +80,10 @@ public class RatingDialog extends AppCompatDialog implements RatingBar.OnRatingB
         getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
         setContentView(R.layout.dialog_rating);
 
-        tvTitle = (TextView) findViewById(R.id.dialog_rating_title);
         tvContent = (TextView) findViewById(R.id.dialog_rating_content);
         tvNegative = (TextView) findViewById(R.id.dialog_rating_button_negative);
         tvPositive = (TextView) findViewById(R.id.dialog_rating_button_positive);
-        ratingBar = (RotationRatingBar) findViewById(R.id.dialog_rating_rating_bar);
-        ivIcon = (ImageView) findViewById(R.id.dialog_rating_icon);
+        ratingBar = (ScaleRatingBar) findViewById(R.id.dialog_rating_rating_bar);
         ratingButtons = (LinearLayout) findViewById(R.id.dialog_rating_buttons);
         btnRate = findViewById(R.id.btnRate);
         btnLate = findViewById(R.id.btnLate);
@@ -155,7 +153,6 @@ public class RatingDialog extends AppCompatDialog implements RatingBar.OnRatingB
                 }
             }
         });
-        tvTitle.setText(builder.title);
         tvContent.setText("We’d greatly appreciate if you can rate us.");
         tvPositive.setText(builder.positiveText);
         tvNegative.setText(builder.negativeText);
@@ -199,41 +196,27 @@ public class RatingDialog extends AppCompatDialog implements RatingBar.OnRatingB
                 starnumber = b;
                 switch (b) {
                     case 0:
-                        tvTitle.setText("We are working hard for a better user eperience.");
                         tvContent.setText("We’d greatly appreciate if you can rate us.");
-                        ivIcon.setImageDrawable(context.getResources().getDrawable(R.drawable.default_rate3));
                         break;
                     case 1:
-                        tvTitle.setText("Oh, no!");
                         tvContent.setText("Please leave us some feedback");
-                        ivIcon.setImageDrawable(context.getResources().getDrawable(R.drawable.default_rate1));
                         break;
 
                     case 2:
-                        tvTitle.setText("Oh, no!");
                         tvContent.setText("Please leave us some feedback");
-                        ivIcon.setImageDrawable(context.getResources().getDrawable(R.drawable.default_rate2));
                         break;
 
                     case 3:
-                        tvTitle.setText("Oh, no!");
                         tvContent.setText("Please leave us some feedback");
-                        ivIcon.setImageDrawable(context.getResources().getDrawable(R.drawable.default_rate3));
                         break;
                     case 4:
-                        tvTitle.setText("We like you too!");
                         tvContent.setText("Thank for your feedback.");
-                        ivIcon.setImageDrawable(context.getResources().getDrawable(R.drawable.default_rate4));
                         break;
                     case 5:
-                        tvTitle.setText("We like you too!");
                         tvContent.setText("Thank for your feedback.");
-                        ivIcon.setImageDrawable(context.getResources().getDrawable(R.drawable.default_rate5));
                         break;
                     default:
-                        tvTitle.setText("Oh, no!");
                         tvContent.setText("Please leave us some feedback");
-                        ivIcon.setImageDrawable(context.getResources().getDrawable(R.drawable.default_rate1));
                         break;
                 }
 
@@ -311,8 +294,6 @@ public class RatingDialog extends AppCompatDialog implements RatingBar.OnRatingB
 
     private void openForm() {
         ratingButtons.setVisibility(View.GONE);
-        ivIcon.setVisibility(View.GONE);
-        tvTitle.setVisibility(View.GONE);
         ratingBar.setVisibility(View.GONE);
     }
 
@@ -325,9 +306,6 @@ public class RatingDialog extends AppCompatDialog implements RatingBar.OnRatingB
         }
     }
 
-    public TextView getTitleTextView() {
-        return tvTitle;
-    }
 
     public TextView getPositiveButtonTextView() {
         return tvPositive;
@@ -337,11 +315,9 @@ public class RatingDialog extends AppCompatDialog implements RatingBar.OnRatingB
         return tvNegative;
     }
 
-    public ImageView getIconImageView() {
-        return ivIcon;
-    }
 
-    public RotationRatingBar getRatingBarView() {
+
+    public ScaleRatingBar getRatingBarView() {
         return ratingBar;
     }
 
