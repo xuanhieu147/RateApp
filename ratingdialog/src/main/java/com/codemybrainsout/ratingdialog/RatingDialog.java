@@ -24,7 +24,6 @@ import androidx.core.content.ContextCompat;
 
 import com.willy.ratingbar.BaseRatingBar;
 import com.willy.ratingbar.RotationRatingBar;
-import com.willy.ratingbar.ScaleRatingBar;
 
 import java.text.DateFormat;
 import java.text.ParseException;
@@ -48,7 +47,7 @@ public class RatingDialog extends AppCompatDialog implements RatingBar.OnRatingB
     private Activity context;
     private Builder builder;
     private TextView tvContent, tvNegative, tvPositive;
-    private ScaleRatingBar ratingBar;
+    private RotationRatingBar ratingBar;
     private LinearLayout ratingButtons;
     Button btnRate;
     TextView btnLate;
@@ -83,7 +82,7 @@ public class RatingDialog extends AppCompatDialog implements RatingBar.OnRatingB
         tvContent = (TextView) findViewById(R.id.dialog_rating_content);
         tvNegative = (TextView) findViewById(R.id.dialog_rating_button_negative);
         tvPositive = (TextView) findViewById(R.id.dialog_rating_button_positive);
-        ratingBar = (ScaleRatingBar) findViewById(R.id.dialog_rating_rating_bar);
+        ratingBar = (RotationRatingBar) findViewById(R.id.dialog_rating_rating_bar);
         ratingButtons = (LinearLayout) findViewById(R.id.dialog_rating_buttons);
         btnRate = findViewById(R.id.btnRate);
         btnLate = findViewById(R.id.btnLate);
@@ -317,7 +316,7 @@ public class RatingDialog extends AppCompatDialog implements RatingBar.OnRatingB
 
 
 
-    public ScaleRatingBar getRatingBarView() {
+    public RotationRatingBar getRatingBarView() {
         return ratingBar;
     }
 

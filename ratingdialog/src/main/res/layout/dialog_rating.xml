@@ -30,7 +30,7 @@
             android:textColor="@color/white"
             android:textSize="16sp" />
 
-        <com.willy.ratingbar.ScaleRatingBar
+        <com.willy.ratingbar.RotationRatingBar
             android:id="@+id/dialog_rating_rating_bar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

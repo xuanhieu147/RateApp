@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
                 .date(1)
                 .setNameApp(getString(R.string.app_name))
                 .setIcon(R.mipmap.ic_launcher)
-                .setEmail("vapp.helpcenter@gmail.com")
+                .setEmail("momcenter.ads@gmail.com")
                 .isShowButtonLater(true)
                 .isClickLaterDismiss(true)
                 .setOnlickRate(new RateButtonCallback() {
